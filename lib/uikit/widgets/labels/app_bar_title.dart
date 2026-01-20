@@ -4,11 +4,7 @@ class AppBarTitle extends StatelessWidget {
   final String title;
   final double fontSize;
 
-  const AppBarTitle({
-    super.key,
-    required this.title,
-    this.fontSize = 22,
-  });
+  const AppBarTitle({super.key, required this.title, this.fontSize = 22});
 
   @override
   Widget build(BuildContext context) {

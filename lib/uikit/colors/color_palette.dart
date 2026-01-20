@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class LightColorPalette { 
+abstract class LightColorPalette {
   static const white = Colors.white;
   static const black = Colors.black;
   static const lightScaffold = Color(0xFFF5F5F5);

@@ -17,15 +17,10 @@ class _ThemeBuilderState extends State<ThemeBuilder> {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<ThemeMode>(
-      valueListenable: ThemeInherited.of(context).themeMode, 
-      builder: (
-        builderContext,
-        themeMode,
-        _,
-      ) => widget.builder(
-        builderContext,
-        themeMode,
-      ),
+      valueListenable: ThemeInherited.of(context).themeMode,
+      builder:
+          (builderContext, themeMode, _) =>
+              widget.builder(builderContext, themeMode),
     );
   }
 }
