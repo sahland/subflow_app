@@ -15,7 +15,7 @@ class AppBarTitle extends StatelessWidget {
       style: TextStyle(
         fontSize: fontSize,
         fontWeight: FontWeight.w600,
-        color: theme.colorScheme.secondary,
+        color: theme.appBarTheme.foregroundColor ?? theme.colorScheme.onSurface,
       ),
     );
   }

@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
@@ -30,17 +28,20 @@ class RootPage extends StatelessWidget {
           color: Colors.grey,
         ),
         currentIndex: navigationShell.currentIndex,
-        items: _buildBottomNavBaeItems(theme),
-        onTap:
-            (index) => navigationShell.goBranch(
+        items: _buildBottomNavItems(theme),
+        onTap: (index) {
+          if (index != navigationShell.currentIndex) {
+            navigationShell.goBranch(
               index,
-              initialLocation: index == navigationShell.currentIndex,
-            ),
+              initialLocation: false,
+            );
+          }
+        },
       ),
     );
   }
 
-  List<BottomNavigationBarItem> _buildBottomNavBaeItems(ThemeData theme) => [
+  List<BottomNavigationBarItem> _buildBottomNavItems(ThemeData theme) => [
     BottomNavigationBarItem(
       icon: SvgPicture.asset(
         RootPage._homeIcon,
