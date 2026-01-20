@@ -1,3 +1,4 @@
+#----------------------------- MAIN INFO -----------------------------#
 name: subflow_app
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
@@ -9,6 +10,7 @@ version: 1.0.0+1
 environment:
   sdk: ^3.7.2
 
+#----------------------------- PRODUCTION PACKAGES -----------------------------#
 dependencies:
   flutter:
     sdk: flutter
@@ -19,15 +21,34 @@ dependencies:
   flutter_svg: ^2.0.10
   cupertino_icons: ^1.0.8
 
+
+#----------------------------- DEVELOPMENT PACKAGES -----------------------------#
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
   mockito: ^5.6.3
   build_runner: ^2.4.0
+  flutter_launcher_icons: ^0.14.3
 
 
+#----------------------------- LOCAL ASSETS -----------------------------#
 flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/icon/icon.png
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 16
+  web:
+    generate: true
+  windows:
+    generate: true
+  macos:
+    generate: true
+
